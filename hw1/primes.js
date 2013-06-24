@@ -10,7 +10,6 @@ function isPrime(n) {
     /**
      * An integer is prime if it is not divisible by any integer less than or equal to its square root
      **/
-
     var limit = Math.sqrt(n);
 
     for (var i = 2; i <= limit; i++) {
@@ -29,7 +28,7 @@ for (candidate = 2; primes_found < 100; candidate++) {
         primes_found++;
         fs.appendFileSync(outfile, candidate);
         if (primes_found != 100)
-            fs.appendFileSync(outfile, ",");
+	    fs.appendFileSync(outfile, ",");
     }
 }
 
